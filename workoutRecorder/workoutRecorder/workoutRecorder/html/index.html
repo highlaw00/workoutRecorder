@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workout Recorder</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1>Highlaw's Workout Recorder</h1>
+    <div>
+      <form>
+        <label for="calendar"> Select Date: </label>
+        <input type="date" id="calendar" />
+        <input type="submit" id="calendar-submit" />
+      </form>
+    </div>
+
+    <div>
+      <table class="hidden center" id="workout-table">
+        <button class="hidden" id="table-button">Add Workout</button>
+        <thead>
+          <tr>
+            <td colspan="4" id="table-header"></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <form>
+      <div>
+        <input
+          type="radio"
+          id="BenchPress"
+          name="workout-Name"
+          value="BenchPress"
+        />
+        <label for="BenchPress">Bench Press</label>
+      </div>
+
+      <div>
+        <input type="radio" id="Squat" name="workout-Name" value="Squat" />
+        <label for="Squat">Squat</label>
+      </div>
+
+      <div>
+        <input
+          type="radio"
+          id="DeadLift"
+          name="workout-Name"
+          value="DeadLift"
+        />
+        <label for="DeadLift">Dead Lift</label>
+      </div>
+
+      <input type="number" placeholder="Weights (kg)" step="0.5" />
+    </form>
+
+    <script src="../js/calendar.js"></script>
+    <script src="../js/table.js"></script>
+  </body>
+</html>
